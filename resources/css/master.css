@@ -1,0 +1,37 @@
+body {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/asfalt.png");
+}
+
+
+
+.jumbotron {
+  text-align: center;
+  width: 80%;
+  margin: 10rem 10%;
+
+}
+
+.input-group {
+  width: 20rem;
+  margin: auto;
+}
+
+.container {
+  width: 50rem;
+  height: 50rem;
+  padding: 1rem;
+}
+
+.row {
+}
+
+.cell {
+  display: inline-block;
+  background-color: gray;
+  border: solid .25px black;
+  height: 100%;
+}
+
+.draw {
+  color: brown;
+}
