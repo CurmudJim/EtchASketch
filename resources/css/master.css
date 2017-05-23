@@ -1,25 +1,35 @@
 body {
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/asfalt.png");
+  color: rgb(13,14,15);
 }
+
+
 
 
 
 .jumbotron {
   text-align: center;
-  width: 80%;
-  margin: 10rem 10%;
+  width: 70rem;
+  margin: 10rem auto;
+  border-radius: 1rem;
+  border: solid .25rem rgb(13,14,15);
+  background-color: rgba(229,230,231,.25);
+}
 
+.jumbotron h1 {
+  font-family: 'Rancho', cursive;
 }
 
 .input-group {
   width: 20rem;
-  margin: auto;
+  margin: 2rem auto 0 auto;
 }
 
 .container {
   width: 50rem;
   height: 50rem;
-  padding: 1rem;
+  margin: 1rem auto;
+
 }
 
 .row {
@@ -27,11 +37,12 @@ body {
 
 .cell {
   display: inline-block;
-  background-color: gray;
-  border: solid .25px black;
+  background-color: lightgray;
+  border: solid .25px rgba(13,14,15,.75);
   height: 100%;
 }
 
 .draw {
-  color: brown;
+  background-color: rgba(13,14,15,.5);
+  border: none;
 }

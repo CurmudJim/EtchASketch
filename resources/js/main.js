@@ -1,6 +1,15 @@
 $(document).ready(function() {
 
-  $('.btn').click(function() {
+  $("#parimeter").keyup(function(event){
+      if(event.keyCode == 13){
+          $("#startBtn").click();
+      }
+  });
+
+  $('#startBtn').click(function() {
+
+
+
     var parimeter = $('input').val();
 
     if (parimeter==null || parimeter<2 || parimeter>40){
@@ -8,7 +17,7 @@ $(document).ready(function() {
       return false;
     }else {
 
-    $('.input-group').hide("slow");
+    $('.input-group').hide();
     $('.jumbotron').append('<button type="button" class="btn btn-danger">Reset</button>');
     $('.jumbotron').append('<div class="container"></div>');
 
@@ -25,7 +34,7 @@ $(document).ready(function() {
     $('.row').css("height", cellParimeter + '%');
 
     $(".cell").hover(function() {
-      $( this ).fadeTo('slow', 0);
+      $( this ).addClass('draw');
     });
 
 
@@ -38,6 +47,8 @@ $(document).ready(function() {
 }
 
   });
+
+
 
 
 
