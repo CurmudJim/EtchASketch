@@ -50,24 +50,26 @@ $(document).ready(function() {
 
 
       const cells = document.querySelectorAll('.cell');
-      function cellFill(cellColor) {
+
+
+
+
+      $('.btn-dark').click(function() {
         cells.forEach((cell) => {
           var tint = .0;
           cell.addEventListener("mouseover", function(e) {
-            e.target.style.background = `rgba(${cellColor},${tint+=.1})`
+            e.target.style.background = `rgba(0,0,0,${tint+=.1})`
           })
         });
-      }
-
-      var cellColor = "0,0,0"
-      
-      $('.btn-dark').click(function() {
-        cellColor = "0,0,0";
-        return cellFill(cellColor);
       });
 
       $('.btn-light').click(function() {
-        return cellFill(getRandomColor());
+        cells.forEach((cell) => {
+          var tint = .0;
+          cell.addEventListener("mouseover", function(e) {
+            e.target.style.background = `rgba(${getRandomColor()},${tint+=.1})`
+          })
+        });
       });
 
       $('.btn-danger').click(function() {
