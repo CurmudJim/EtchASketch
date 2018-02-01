@@ -1,5 +1,35 @@
 $(document).ready(function() {
 
+  function sum(a) {
+	const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+	if (a.length > 0) {
+		return a.reduce(reducer);
+	} else {
+		return 0
+	}
+}
+
+function difference(a) {
+	const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+	if (a.length > 0) {
+		return a.reduce(reducer);
+	} else {
+		return 0
+	}
+}
+
+function sum(a) {
+	const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+	if (a.length > 0) {
+		return a.reduce(reducer);
+	} else {
+		return 0
+	}
+}
+
   $("#size").keyup(function(event){
     if(event.keyCode == 13){
       $("#startBtn").click();
