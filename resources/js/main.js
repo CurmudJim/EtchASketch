@@ -1,35 +1,5 @@
 $(document).ready(function() {
 
-  function sum(a) {
-	const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-	if (a.length > 0) {
-		return a.reduce(reducer);
-	} else {
-		return 0
-	}
-}
-
-function difference(a) {
-	const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-	if (a.length > 0) {
-		return a.reduce(reducer);
-	} else {
-		return 0
-	}
-}
-
-function sum(a) {
-	const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-	if (a.length > 0) {
-		return a.reduce(reducer);
-	} else {
-		return 0
-	}
-}
-
   $("#size").keyup(function(event){
     if(event.keyCode == 13){
       $("#startBtn").click();
@@ -40,16 +10,7 @@ function sum(a) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  function getRandomColor() {
-    var color = `${getRandomInt(255)},${getRandomInt(255)},${getRandomInt(255)}`;
-    return color;
-  }
-
-
   $('#startBtn').click(function() {
-
-
-
     var size = $('input').val();
     $('#size').val('')
     if (size=='') {
@@ -58,12 +19,12 @@ function sum(a) {
     if (size<2 || size>64){
       alert("Enter a number greater than 1 and less than 65.");
       return false;
-    }else {
+    } else {
       $('.input-group').hide();
       $('.jumbotron').append('<div class="btn-group" role="group" aria-label="Basic example">\
-      <button type="button" class="btn btn-dark">Black</button>\
-      <button type="button" class="btn btn-light">Color</button>\
-      <button type="button" class="btn btn-danger">Reset</button></div>');
+      <button id="blackBtn" type="button" class="btn btn-dark">Black</button>\
+      <button id="colorBtn" type="button" class="btn btn-light">Color</button>\
+      <button id="resetBtn" type="button" class="btn btn-danger">Reset</button></div>');
       $('.jumbotron').append('<div class="container"></div>');
 
       for (var i = 0; i < size; i++) {
@@ -81,38 +42,35 @@ function sum(a) {
 
       const cells = document.querySelectorAll('.cell');
 
-
-
-
-      $('.btn-dark').click(function() {
+      function cellFill(color) {
         cells.forEach((cell) => {
           var tint = .0;
           cell.addEventListener("mouseover", function(e) {
-            e.target.style.background = `rgba(0,0,0,${tint+=.1})`
+            e.target.style.background = `rgba(${color},${tint+=.1})`
           })
         });
+      }
+
+      function getRandomColor() {
+        var color = `${getRandomInt(255)},${getRandomInt(255)},${getRandomInt(255)}`;
+        return color;
+      }
+
+      $('#blackBtn').click(function() {
+        cellFill('0,0,0')
       });
 
-      $('.btn-light').click(function() {
-        cells.forEach((cell) => {
-          var tint = .0;
-          cell.addEventListener("mouseover", function(e) {
-            e.target.style.background = `rgba(${getRandomColor()},${tint+=.1})`
-          })
-        });
+      $('#colorBtn').click(function() {
+        cellFill(getRandomColor())
       });
 
-      $('.btn-danger').click(function() {
+      $('#resetBtn').click(function() {
         $('.btn-group').hide(0);
         $('.container').remove();
         $('.input-group').show('slow');
-
       });
     }
-
   });
-
-
 
 
 

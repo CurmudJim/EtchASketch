@@ -6,106 +6,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
     <link rel="stylesheet" href="resources/css/master.css">
-    <title>Calculator</title>
+    <title>Etch-A-Sketch</title>
   </head>
   <body>
+    <div class="jumbotron">
 
-    <main class="container">
-      <div class="card text-center">
-        <div id="screen" class="row">
-        <div class="col-12">
-          <div id="inputScreen" class="row">
-
-          </div>
-          <div id="outputScreen" class="row">
-
-          </div>
-        </div>
+        <h1>Etch-A-Sketch</h1>
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button" id="startBtn">Start</button>
+          </span>
+          <input type="text" class="form-control" id="size" placeholder="Size" aria-label="Size">
         </div>
 
-        <div id="reset" class="row">
-          <button type="button" name="clear" class="btn btn-danger col-6">
-            Clear
-          </button>
-
-          <button type="button" name="backspace" class="btn btn-warning col-6">
-            Backspace
-          </button>
-
-        </div>
-        <div id="input" class="row">
-          <div class="col-9 col-btns">
-          <div class="row">
-            <button type="button" name="seven" class="col btn btn-integer">
-              7
-            </button>
-            <button type="button" name="eight" class="col btn btn-integer">
-              8
-            </button>
-            <button type="button" name="nine" class="col btn btn-integer">
-              9
-            </button>
-          </div>
-          <div class="row">
-            <button type="button" name="four" class="col btn btn-integer">
-              4
-            </button>
-            <button type="button" name="five" class="col btn btn-integer">
-              5
-            </button>
-            <button type="button" name="six" class="col btn btn-integer">
-              6
-            </button>
-          </div>
-          <div class="row">
-            <button type="button" name="one" class="col btn btn-integer">
-              1
-            </button>
-            <button type="button" name="two" class="col btn btn-integer">
-              2
-            </button>
-            <button type="button" name="three" class="col btn btn-integer">
-              3
-            </button>
-          </div>
-          <div class="row">
-            <button type="button" name="decimal" class="col btn btn-operator">
-              .
-            </button>
-            <button type="button" name="zero" class="col btn btn-integer">
-            0
-          </button>
-            <button type="button" name="equal" class="col btn btn-operator">
-              =
-            </button>
-          </div>
-      </div>
-      <div class="col-3 col-btns">
-        <div class="row">
-          <button type="button" name="divide" class="col btn btn-operator">
-            /
-          </button>
-        </div>
-        <div class="row">
-          <button type="button" name="multiply" class="col btn btn-operator">
-            *
-          </button>
-        </div>
-        <div class="row">
-          <button type="button" name="subtract" class="col btn btn-operator">
-            -
-          </button>
-        </div>
-        <div class="row">
-          <button type="button" name="add" class="col btn btn-operator">
-            +
-          </button>
-        </div>
-      </div>
-
-  </div>
-    </main>
-
+    </div>
 
     <!-- Latest compiled and minified JavaScript -->
 
